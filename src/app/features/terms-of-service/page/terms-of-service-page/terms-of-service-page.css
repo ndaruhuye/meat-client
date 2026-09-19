@@ -1,0 +1,85 @@
+:host {
+  display: block;
+}
+.document-page {
+  width: min(100% - 2rem, 52rem);
+  margin-inline: auto;
+  padding-block: 4rem 6rem;
+}
+.back {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-size: clamp(2.6rem, 6vw, 4.3rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+.lead {
+  font-size: 1.15rem;
+  margin-top: 1.2rem;
+}
+.notice {
+  margin-block: 3rem;
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, var(--surface-secondary), var(--surface));
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: var(--background);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+}
+.notice p {
+  line-height: 1.85;
+  margin-block: 1rem 1.5rem;
+}
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--text-primary);
+  color: var(--background);
+  border-radius: 3rem;
+  padding: 0.85rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+nav {
+  display: grid;
+  gap: 0.5rem;
+}
+nav a {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 4px;
+}

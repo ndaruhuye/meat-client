@@ -1,0 +1,137 @@
+<header
+  class="header"
+  [class.header--scrolled]="isScrolled()"
+  [class.header--menu-open]="isMenuOpen()"
+>
+  <div class="header__container">
+    <!-- Brand -->
+    <a
+      #brandLink
+      [routerLink]="['/']"
+      class="header__brand"
+      aria-label="Nexera Group Meta Gateway home"
+      (click)="closeMenu()"
+    >
+      <img class="header__logo" [ngSrc]="logoSrc()" alt="" width="36" height="36" priority />
+      <span class="brand-copy"><strong>Meta Gateway</strong><small>BY NEXERA GROUP</small></span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="header__navigation" aria-label="Primary navigation">
+      @for (item of navigationItems; track item.route) {
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="header__link--active"
+          [routerLinkActiveOptions]="{
+            exact: item.exact ?? false,
+          }"
+          ariaCurrentWhenActive="page"
+          class="header__link"
+        >
+          {{ item.label }}
+        </a>
+      }
+    </nav>
+
+    <!-- Contact -->
+    <div class="header__actions">
+      <a
+        [routerLink]="['/contact']"
+        routerLinkActive="header__contact--active"
+        ariaCurrentWhenActive="page"
+        class="header__contact"
+      >
+        Contact
+
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button
+      type="button"
+      class="theme-toggle"
+      (click)="toggleTheme()"
+      [attr.aria-label]="dark() ? 'Switch to light theme' : 'Switch to dark theme'"
+    >
+      <i class="fa-solid" [class.fa-sun]="dark()" [class.fa-moon]="!dark()" aria-hidden="true"></i>
+    </button>
+
+    <!-- Mobile trigger -->
+    <button
+      #menuTrigger
+      type="button"
+      class="header__menu-button"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="mobile-navigation"
+      aria-haspopup="dialog"
+      [attr.aria-label]="isMenuOpen() ? 'Close navigation' : 'Open navigation'"
+      (click)="toggleMenu()"
+    >
+      <span class="header__menu-line"></span>
+      <span class="header__menu-line"></span>
+    </button>
+  </div>
+</header>
+
+<dialog
+  #mobileDialog
+  id="mobile-navigation"
+  class="header__mobile"
+  aria-label="Mobile navigation"
+  (cancel)="onDialogCancel($event)"
+  (close)="onDialogClose()"
+>
+  <div class="header__mobile-inner">
+    <div class="header__mobile-heading">
+      <p class="header__mobile-eyebrow">Navigation</p>
+      <button
+        type="button"
+        class="header__mobile-close"
+        aria-label="Close navigation"
+        autofocus
+        (click)="closeMenu()"
+      >
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <nav class="header__mobile-navigation" aria-label="Mobile navigation">
+      @for (item of navigationItems; track item.route; let i = $index) {
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="header__mobile-link--active"
+          [routerLinkActiveOptions]="{
+            exact: item.exact ?? false,
+          }"
+          ariaCurrentWhenActive="page"
+          class="header__mobile-link"
+          (click)="onMobileLinkClick(item.route)"
+        >
+          <span class="header__mobile-number">
+            {{ (i + 1).toString().padStart(2, '0') }}
+          </span>
+
+          <span class="header__mobile-label">
+            {{ item.label }}
+          </span>
+
+          <i class="fa-solid fa-arrow-right header__mobile-arrow" aria-hidden="true"></i>
+        </a>
+      }
+    </nav>
+
+    <div class="header__mobile-footer">
+      <a
+        [routerLink]="['/contact']"
+        class="header__mobile-contact"
+        (click)="onMobileLinkClick('/contact')"
+      >
+        Contact Nexera Group
+
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+
+      <a href="mailto:info@nexeragroup.rw" class="header__mobile-email"> info@nexeragroup.rw </a>
+    </div>
+  </div>
+</dialog>

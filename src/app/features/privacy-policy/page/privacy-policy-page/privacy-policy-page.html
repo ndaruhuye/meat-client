@@ -1,0 +1,999 @@
+<article class="privacy information-page">
+  <header class="privacy-hero">
+    <div class="privacy-container privacy-hero__grid">
+      <div class="privacy-hero__content">
+        <a routerLink="/" class="page-breadcrumb"
+          ><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Meta Gateway</a
+        >
+        <p class="privacy-eyebrow">LEGAL • PRIVACY</p>
+
+        <h1 class="privacy-hero__title">Privacy Policy</h1>
+
+        <p class="privacy-hero__lead">
+          This Privacy Policy explains how Nexera Group processes, protects, retains, shares and
+          manages personal information when Meta Gateway is used to connect authorized business
+          applications with supported Meta and other enabled services.
+        </p>
+      </div>
+
+      <div class="privacy-hero__meta">
+        <div>
+          <span>Effective</span>
+          <strong>{{ effectiveDate }}</strong>
+        </div>
+
+        <div>
+          <span>Last updated</span>
+          <strong>{{ lastUpdated }}</strong>
+        </div>
+
+        <div>
+          <span>Product</span>
+          <strong>Meta Gateway</strong>
+        </div>
+
+        <div>
+          <span>Operator</span>
+          <strong>Nexera Group</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="privacy-container privacy-layout">
+    <aside class="privacy-navigation">
+      <div class="privacy-navigation__inner">
+        <p class="privacy-navigation__label">ON THIS PAGE</p>
+
+        <nav aria-label="Privacy policy sections">
+          @for (section of sections; track section.id) {
+            <a
+              class="privacy-navigation__link"
+              routerLink="/privacy-policy"
+              [fragment]="section.id"
+            >
+              <span>{{ section.number }}</span>
+              {{ section.title }}
+            </a>
+          }
+        </nav>
+      </div>
+    </aside>
+
+    <div class="privacy-content">
+      <section id="overview" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">01</span>
+          <h2>Overview</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Meta Gateway is an integration platform developed and operated by Nexera Group.
+          </p>
+
+          <p>
+            The platform provides infrastructure for connecting authorized business applications
+            with supported Meta services and other configured integrations, including approved
+            messaging, API and webhook workflows.
+          </p>
+
+          <p>
+            This policy describes the categories and sources of personal information that may be
+            processed, why information is processed, how it may be shared or transferred, how long
+            it is retained, the safeguards used to protect it, and the privacy choices and rights
+            that may be available.
+          </p>
+
+          <div class="privacy-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p>
+              The exact information processed depends on the services, permissions and business
+              workflows enabled for a connected organization. Some rights and responsibilities also
+              depend on whether Nexera Group acts as a data controller or as a data processor for
+              the relevant processing activity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="company" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">02</span>
+          <h2>Who we are</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway is developed and operated by Nexera Group, a software engineering company
+            based in Kigali, Rwanda.
+          </p>
+
+          <p>
+            Nexera Group designs software applications, integration platforms, APIs and
+            infrastructure used by businesses and organizations to manage digital operations.
+          </p>
+
+          <div class="company-card">
+            <div>
+              <span>COMPANY</span>
+              <strong>Nexera Group</strong>
+            </div>
+
+            <div>
+              <span>PRODUCT</span>
+              <strong>Meta Gateway</strong>
+            </div>
+
+            <div>
+              <span>WEBSITE</span>
+              <a href="https://nexeragroup.rw/" target="_blank" rel="noopener noreferrer">
+                nexeragroup.rw
+                <span aria-hidden="true"
+                  ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </div>
+
+            <div>
+              <span>PRIVACY CONTACT</span>
+              <a href="mailto:info@nexeragroup.rw">info@nexeragroup.rw</a>
+            </div>
+
+            <div>
+              <span>LOCATION</span>
+              <strong>Kigali, Rwanda</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roles" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">03</span>
+          <h2>Our privacy role</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Nexera Group's role depends on the purpose and context of the processing.
+          </p>
+
+          <div class="privacy-principles">
+            <div>
+              <span>01</span>
+              <strong>When Nexera Group acts as controller</strong>
+              <p>
+                Nexera Group may act as a data controller where it determines why and how personal
+                information is processed, for example for Meta Gateway administration, account
+                management, service security, support, operational records, privacy requests and
+                legal compliance.
+              </p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>When Nexera Group acts as processor</strong>
+              <p>
+                Where Meta Gateway processes communication, integration or platform information on
+                behalf of a connected organization and according to that organization's
+                instructions, the organization may be the data controller and Nexera Group may act
+                as its data processor.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            When Nexera Group acts as a processor, the connected organization is generally
+            responsible for determining the lawful purpose of the processing, providing required
+            notices to its users and handling privacy requests relating to the organization's own
+            use of the data. Nexera Group will support those obligations as required by applicable
+            law and applicable contractual arrangements.
+          </p>
+        </div>
+      </section>
+
+      <section id="information" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">04</span>
+          <h2>Information we may process</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Depending on the integration, account configuration and permissions enabled, Meta
+            Gateway may process the following categories of information.
+          </p>
+
+          <div class="information-grid">
+            @for (item of informationItems; track item.title) {
+              <article class="information-card">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+              </article>
+            }
+          </div>
+
+          <p>
+            Meta Gateway is designed to limit processing to information that is relevant to an
+            enabled integration, legitimate operational needs or applicable legal requirements.
+          </p>
+        </div>
+      </section>
+
+      <section id="sources" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">05</span>
+          <h2>How we obtain information</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>Personal information processed by Meta Gateway may come from:</p>
+
+          <ul class="privacy-list">
+            <li>organizations and authorized users that configure or use Meta Gateway;</li>
+            <li>
+              individuals who communicate with a connected organization through an enabled messaging
+              or communication channel;
+            </li>
+            <li>
+              Meta services, including supported APIs, messaging services and webhook events, where
+              the required permissions and authorization exist;
+            </li>
+            <li>
+              other business applications or services intentionally connected to Meta Gateway by an
+              authorized organization; and
+            </li>
+            <li>
+              Meta Gateway itself, through technical, security, authentication, audit, service and
+              diagnostic events generated while operating the platform.
+            </li>
+          </ul>
+
+          <p>
+            Where personal information is not obtained directly from the individual, its source will
+            depend on the connected service and business workflow.
+          </p>
+        </div>
+      </section>
+
+      <section id="usage" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">06</span>
+          <h2>How information is used</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>Information processed through Meta Gateway may be used for the following purposes.</p>
+
+          <div class="purpose-list">
+            @for (purpose of purposes; track purpose.number) {
+              <article class="purpose-item">
+                <span class="purpose-item__number">{{ purpose.number }}</span>
+                <div>
+                  <h3>{{ purpose.title }}</h3>
+                  <p>{{ purpose.description }}</p>
+                </div>
+              </article>
+            }
+          </div>
+
+          <p>
+            Nexera Group does not use personal information for a materially incompatible purpose
+            without taking any additional steps required by applicable law.
+          </p>
+        </div>
+      </section>
+
+      <section id="legal-bases" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">07</span>
+          <h2>Legal bases for processing</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Where applicable law requires a lawful basis for processing, Nexera Group relies on the
+            basis appropriate to the specific processing activity and its role in that activity.
+          </p>
+
+          <div class="information-grid">
+            @for (basis of lawfulBases; track basis.title) {
+              <article class="information-card">
+                <h3>{{ basis.title }}</h3>
+                <p>{{ basis.description }}</p>
+              </article>
+            }
+          </div>
+
+          <p>
+            Where Nexera Group acts only as a processor, the connected organization is responsible
+            for establishing the lawful basis for the processing it instructs Nexera Group to
+            perform, subject to applicable law and contractual requirements.
+          </p>
+
+          <div class="privacy-note">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <p>
+              If consent is relied upon for a specific activity, you may have the right to withdraw
+              that consent. Withdrawal does not affect the lawfulness of processing carried out
+              before the withdrawal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="meta-data" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">08</span>
+          <h2>Meta platform data</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Meta Gateway may receive information from supported Meta services only where the
+            connected organization has enabled the relevant integration and the required permissions
+            or authorization exist.
+          </p>
+
+          <p>
+            Depending on the integration, this may include information associated with WhatsApp
+            Business, Instagram or other supported Meta services.
+          </p>
+
+          <p>
+            Meta platform information is processed to provide the configured integration
+            functionality and related operational, security, support and compliance activities.
+          </p>
+
+          <div class="privacy-principles">
+            <div>
+              <span>01</span>
+              <strong>Authorized access</strong>
+              <p>
+                Integrations operate within the permissions and capabilities configured for the
+                connected account.
+              </p>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>Purpose limitation</strong>
+              <p>
+                Platform information is processed for configured integration, operational, security
+                and legally required purposes.
+              </p>
+            </div>
+
+            <div>
+              <span>03</span>
+              <strong>Data minimization</strong>
+              <p>
+                Meta Gateway is designed to avoid collecting information that is not required for
+                the enabled workflow or legitimate operational requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sensitive-data" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">09</span>
+          <h2>Sensitive information</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway is not designed to require sensitive personal information merely to operate
+            an integration. However, message content or business workflows may contain information
+            that is considered sensitive, special-category or otherwise subject to additional
+            protection under applicable law.
+          </p>
+
+          <p>
+            Connected organizations are responsible for ensuring that any sensitive information they
+            choose to process through enabled workflows is necessary, lawful and subject to
+            appropriate safeguards. Where Nexera Group acts as controller for a processing activity
+            involving sensitive information, it will apply the additional requirements required by
+            applicable law.
+          </p>
+        </div>
+      </section>
+
+      <section id="sharing" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">10</span>
+          <h2>Information sharing</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Nexera Group does not sell personal information processed through Meta Gateway.
+          </p>
+
+          <p>
+            Information may be disclosed where reasonably necessary for the configured service or
+            where permitted or required by applicable law, including to:
+          </p>
+
+          <ul class="privacy-list">
+            <li>
+              the organization that authorized and operates the connected business integration;
+            </li>
+            <li>
+              Meta services or other external services involved in an authorized API, messaging,
+              webhook or integration operation;
+            </li>
+            <li>
+              hosting, infrastructure, security, communications, monitoring or other technology
+              providers that support Meta Gateway;
+            </li>
+            <li>
+              professional advisers, auditors or contractors where access is necessary and subject
+              to appropriate confidentiality or contractual obligations; and
+            </li>
+            <li>
+              courts, regulators, law-enforcement bodies or other authorities where disclosure is
+              required or permitted by applicable law or valid legal process.
+            </li>
+          </ul>
+
+          <p>
+            Access is limited according to the purpose of the processing, applicable permissions and
+            the responsibilities of the parties involved.
+          </p>
+        </div>
+      </section>
+
+      <section id="providers" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">11</span>
+          <h2>Service providers and subprocessors</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Nexera Group may use carefully selected service providers to support infrastructure,
+            hosting, security, monitoring, communications, support or other functions required to
+            operate Meta Gateway.
+          </p>
+
+          <p>
+            Where a provider processes personal information on behalf of Nexera Group or a connected
+            organization, Nexera Group uses contractual and organizational measures appropriate to
+            the processing and applicable law. Providers are expected to process information only
+            for authorized purposes and subject to applicable confidentiality, security and
+            data-protection requirements.
+          </p>
+
+          <p>
+            Additional information about categories of service providers or relevant subprocessors
+            may be made available to connected organizations through applicable service
+            documentation, contractual arrangements or upon an appropriate request.
+          </p>
+        </div>
+      </section>
+
+      <section id="transfers" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">12</span>
+          <h2>International data transfers</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Meta Gateway may interact with services, infrastructure or recipients located in
+            countries other than the country in which an individual or connected organization is
+            located.
+          </p>
+
+          <p>
+            Before personal information is transferred internationally, Nexera Group applies the
+            transfer requirements that are relevant to its role and the applicable law. Depending on
+            the circumstances, these requirements may include regulatory authorization, contractual
+            safeguards, consent or another lawful transfer condition.
+          </p>
+
+          <p>
+            Where Rwanda's data-protection law applies, transfers of personal data outside Rwanda
+            are handled in accordance with the applicable requirements governing cross-border
+            transfers, including required safeguards and contractual responsibilities.
+          </p>
+
+          <p>
+            Where European or other international transfer rules apply, additional lawful transfer
+            mechanisms or safeguards may be used as required by the relevant law.
+          </p>
+
+          <p>
+            You may contact Nexera Group for information about safeguards applicable to a specific
+            transfer for which Nexera Group is responsible.
+          </p>
+        </div>
+      </section>
+
+      <section id="retention" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">13</span>
+          <h2>Data retention</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Personal information is retained only for as long as necessary for the purpose for which
+            it is processed, subject to applicable legal, contractual, security and operational
+            requirements.
+          </p>
+
+          <p>
+            Because Meta Gateway supports different integrations and customers, a single retention
+            period does not apply to every category of information. Relevant retention criteria may
+            include:
+          </p>
+
+          <ul class="privacy-list">
+            <li>the duration of an active account, contract or integration;</li>
+            <li>
+              the time required to complete the configured communication or business workflow;
+            </li>
+            <li>security, audit, fraud-prevention and incident-investigation needs;</li>
+            <li>applicable legal, tax, accounting, regulatory or record-keeping obligations;</li>
+            <li>
+              the period reasonably necessary to establish, exercise or defend legal claims; and
+            </li>
+            <li>backup, disaster-recovery and secure deletion cycles.</li>
+          </ul>
+
+          <div class="retention-grid">
+            <div>
+              <span>Operational data</span>
+              <p>
+                Retained only for the period necessary to provide or support the relevant business
+                workflow and associated obligations.
+              </p>
+            </div>
+
+            <div>
+              <span>Security and audit records</span>
+              <p>
+                Retained for a period appropriate to security monitoring, auditing, incident
+                investigation and applicable obligations.
+              </p>
+            </div>
+
+            <div>
+              <span>Closed or deleted integrations</span>
+              <p>
+                Information no longer required is deleted, anonymized or securely disposed of in
+                accordance with applicable retention requirements and technical deletion cycles.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            Where a connected organization's contract or configuration establishes a more specific
+            lawful retention period, that period may apply to information processed on that
+            organization's behalf.
+          </p>
+        </div>
+      </section>
+
+      <section id="security" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">14</span>
+          <h2>Security</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Meta Gateway is designed with technical and organizational controls intended to protect
+            integration infrastructure and information processed through the platform.
+          </p>
+
+          <p>
+            Depending on the service and environment, controls may include authentication,
+            authorization, encrypted communications, request validation, credential protection,
+            least-privilege access, logging, monitoring, audit controls and protections against
+            replayed, malformed or unauthorized requests.
+          </p>
+
+          <p>
+            No system can guarantee absolute security. Nexera Group maintains measures intended to
+            reduce risk and responds to suspected security incidents in accordance with applicable
+            operational and legal requirements.
+          </p>
+
+          <a routerLink="/security" class="privacy-action-link">
+            Learn more about Meta Gateway security
+            <span aria-hidden="true"
+              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+            ></span>
+          </a>
+        </div>
+      </section>
+
+      <section id="credentials" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">15</span>
+          <h2>Tokens and credentials</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway may use access tokens, application credentials, cryptographic keys or other
+            integration secrets required to communicate securely with supported external services.
+          </p>
+
+          <p>
+            These credentials are treated as sensitive system information and are intended to remain
+            within protected backend infrastructure, secret-management systems or other
+            appropriately controlled environments.
+          </p>
+
+          <div class="privacy-note privacy-note--security">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <p>
+              Do not send passwords, access tokens, private keys, application secrets or other
+              credentials through public contact, support or data-deletion forms.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cookies" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">16</span>
+          <h2>Cookies and similar technologies</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway websites or portals may use cookies, browser storage or similar
+            technologies where required for functions such as authentication, session security, user
+            preferences, service operation or fraud prevention.
+          </p>
+
+          <p>
+            If analytics, advertising or other non-essential tracking technologies are used, Nexera
+            Group will provide additional information and request consent where applicable law
+            requires it.
+          </p>
+
+          <p>
+            Connected third-party services may use their own cookies or similar technologies under
+            their own privacy and cookie policies.
+          </p>
+        </div>
+      </section>
+
+      <section id="rights" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">17</span>
+          <h2>Your privacy rights</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Depending on the applicable law, the type of processing and Nexera Group's role, you may
+            have rights concerning personal information associated with you.
+          </p>
+
+          <p>These rights may include the right to:</p>
+
+          <ul class="privacy-list">
+            <li>request confirmation of whether personal information about you is processed;</li>
+            <li>request access to and a copy of personal information associated with you;</li>
+            <li>request correction or rectification of inaccurate or incomplete information;</li>
+            <li>request deletion or erasure where the applicable legal conditions are met;</li>
+            <li>request restriction of processing in applicable circumstances;</li>
+            <li>object to certain processing where applicable law provides that right;</li>
+            <li>
+              request portability of information in a structured and readable format where
+              applicable;
+            </li>
+            <li>
+              ask about the source of personal information that was not obtained directly from you;
+            </li>
+            <li>
+              ask whether information has been transferred to another country and, where applicable,
+              request information about relevant safeguards;
+            </li>
+            <li>
+              withdraw consent where processing is based on consent, without affecting processing
+              lawfully carried out before withdrawal; and
+            </li>
+            <li>
+              exercise applicable rights concerning solely automated decisions that produce legal or
+              similarly significant effects.
+            </li>
+          </ul>
+
+          <p>
+            These rights are not absolute and may be subject to conditions, limitations or
+            exceptions under applicable law.
+          </p>
+
+          <p>
+            Where Nexera Group processes information only on behalf of a connected organization, we
+            may direct or transmit your request to that organization because it is responsible for
+            the relevant processing decision.
+          </p>
+
+          <p>
+            We may request information reasonably necessary to verify identity, authority, account
+            ownership or the integration connected with a request. Do not provide credentials or
+            unnecessary sensitive information for verification.
+          </p>
+        </div>
+      </section>
+
+      <section id="automated" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">18</span>
+          <h2>Automated decision-making</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway uses automated systems to perform technical functions such as routing
+            messages, processing webhook events, validating requests, applying security controls and
+            operating integrations.
+          </p>
+
+          <p>
+            Nexera Group does not use Meta Gateway personal information to make decisions based
+            solely on automated processing that produce legal or similarly significant effects on
+            individuals unless that processing is separately disclosed and carried out in accordance
+            with applicable law.
+          </p>
+
+          <p>
+            A connected organization may independently configure systems or workflows that make
+            decisions using information delivered through an integration. Where that organization
+            determines the purpose and means of such decision-making, its own privacy notice and
+            legal obligations apply.
+          </p>
+        </div>
+      </section>
+
+      <section id="deletion" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">19</span>
+          <h2>Data deletion</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            You may request deletion of personal information associated with your use of Meta
+            Gateway where the applicable legal conditions are satisfied.
+          </p>
+
+          <p>
+            A deletion request should contain enough information for Nexera Group to identify the
+            relevant account, organization, integration or processing activity, but should never
+            include passwords, access tokens, private keys or other sensitive credentials.
+          </p>
+
+          <p>
+            Some information may need to be retained where required or permitted by law, for
+            security purposes, to resolve disputes, to enforce agreements or where another lawful
+            retention obligation applies. Where appropriate, information may instead be anonymized
+            or isolated from active processing.
+          </p>
+
+          <a routerLink="/data-deletion" class="deletion-card">
+            <div>
+              <span class="deletion-card__eyebrow">DATA DELETION</span>
+              <strong>View data deletion instructions</strong>
+              <p>Follow the steps for submitting and verifying a deletion request.</p>
+            </div>
+
+            <span class="deletion-card__arrow" aria-hidden="true"
+              ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+            ></span>
+          </a>
+        </div>
+      </section>
+
+      <section id="third-party" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">20</span>
+          <h2>Third-party services</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway communicates with external services as part of configured integrations.
+          </p>
+
+          <p>
+            Those services may operate under their own terms, policies and data-handling practices.
+            Nexera Group is not responsible for the independent privacy practices of a third party
+            where that party determines its own purposes and means of processing.
+          </p>
+
+          <p>
+            Organizations using Meta Gateway are responsible for ensuring that external services
+            they enable are appropriate for their intended business use and that they have the
+            permissions, notices and other lawful grounds required for the resulting processing.
+          </p>
+        </div>
+      </section>
+
+      <section id="children" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">21</span>
+          <h2>Children</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Meta Gateway is a business integration service and is not directed to children as a
+            consumer service.
+          </p>
+
+          <p>
+            Connected organizations are responsible for determining whether their communication
+            workflows involve children or minors and for meeting any consent, notice,
+            age-verification or other requirements that apply to those interactions.
+          </p>
+
+          <p>
+            Where Nexera Group becomes aware that personal information has been processed in
+            circumstances that do not satisfy applicable requirements concerning children, Nexera
+            Group will take appropriate steps within its role, which may include working with the
+            responsible connected organization to restrict or delete the information.
+          </p>
+        </div>
+      </section>
+
+      <section id="regional" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">22</span>
+          <h2>Regional privacy requirements</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Meta Gateway is operated from Rwanda and may support organizations or communications
+            involving individuals in other jurisdictions. Privacy rights and obligations may
+            therefore vary according to the applicable law, the location of the relevant
+            individuals, the connected organization's activities and Nexera Group's role.
+          </p>
+
+          <p>
+            Where Rwanda's Law relating to the protection of personal data and privacy applies,
+            Nexera Group processes personal information subject to the rights and obligations
+            established by that law.
+          </p>
+
+          <p>
+            Where laws such as the EU General Data Protection Regulation, the UK GDPR or other
+            applicable privacy legislation govern a particular activity, Nexera Group applies the
+            requirements relevant to its role in that processing.
+          </p>
+
+          <p>
+            If a jurisdiction grants additional privacy rights that apply to a particular processing
+            activity, those rights may be exercised even if they are not described exhaustively in
+            this policy.
+          </p>
+        </div>
+      </section>
+
+      <section id="changes" class="privacy-section">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">23</span>
+          <h2>Changes to this policy</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p>
+            Nexera Group may update this Privacy Policy when Meta Gateway, its integrations, legal
+            requirements, service providers or operational practices change.
+          </p>
+
+          <p>
+            The current version will be published on this page with an updated revision date. Where
+            required by applicable law or where a change materially affects how personal information
+            is processed, Nexera Group will provide additional notice through an appropriate
+            channel.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="privacy-section privacy-section--last">
+        <header class="privacy-section__header">
+          <span class="privacy-section__number">24</span>
+          <h2>Contact and complaints</h2>
+        </header>
+
+        <div class="privacy-section__body">
+          <p class="privacy-section__lead">
+            Questions about this Privacy Policy, Meta Gateway's processing of personal information
+            or an applicable privacy right can be directed to Nexera Group.
+          </p>
+
+          <div class="contact-card">
+            <div>
+              <span>COMPANY</span>
+              <strong>Nexera Group</strong>
+            </div>
+
+            <div>
+              <span>EMAIL</span>
+              <a href="mailto:info@nexeragroup.rw">info@nexeragroup.rw</a>
+            </div>
+
+            <div>
+              <span>WEBSITE</span>
+              <a href="https://nexeragroup.rw/" target="_blank" rel="noopener noreferrer">
+                nexeragroup.rw
+                <span aria-hidden="true"
+                  ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </div>
+
+            <div>
+              <span>LOCATION</span>
+              <strong>Kigali, Rwanda</strong>
+            </div>
+          </div>
+
+          <p>
+            You may also have the right to complain or appeal to the competent data-protection
+            supervisory authority. In Rwanda, the supervisory authority is the Data Protection &amp;
+            Privacy Office.
+          </p>
+
+          <div class="contact-card">
+            <div>
+              <span>RWANDA SUPERVISORY AUTHORITY</span>
+              <strong>Data Protection &amp; Privacy Office</strong>
+            </div>
+
+            <div>
+              <span>COMPLAINT EMAIL</span>
+              <a href="mailto:complaint@dpo.gov.rw">complaint@dpo.gov.rw</a>
+            </div>
+
+            <div>
+              <span>GENERAL EMAIL</span>
+              <a href="mailto:dpp@dpo.gov.rw">dpp@dpo.gov.rw</a>
+            </div>
+
+            <div>
+              <span>WEBSITE</span>
+              <a href="https://dpo.gov.rw/" target="_blank" rel="noopener noreferrer">
+                dpo.gov.rw
+                <span aria-hidden="true"
+                  ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+                ></span>
+              </a>
+            </div>
+          </div>
+
+          <p>
+            If another supervisory authority has jurisdiction over your information, you may also
+            have the right to lodge a complaint with that authority.
+          </p>
+
+          <div class="contact-actions">
+            <a routerLink="/contact" class="privacy-button privacy-button--primary">
+              Contact Nexera Group
+              <span aria-hidden="true"
+                ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              ></span>
+            </a>
+
+            <a routerLink="/data-deletion" class="privacy-button privacy-button--secondary">
+              Data Deletion
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</article>

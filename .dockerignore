@@ -1,0 +1,10 @@
+.git
+.github
+.angular
+node_modules
+dist
+coverage
+tmp
+.env*
+*.log
+.DS_Store

@@ -1,0 +1,290 @@
+<article class="contact information-page">
+  <!-- ======================================================================
+       Hero
+       ====================================================================== -->
+
+  <header class="contact-hero">
+    <div class="contact-container contact-hero__grid">
+      <div class="contact-hero__content">
+        <a routerLink="/" class="page-breadcrumb"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Meta
+          Gateway</a>
+        <p class="contact-eyebrow">CONTACT • NEXERA GROUP</p>
+
+        <h1 class="contact-hero__title">Talk to us about Meta Gateway.</h1>
+
+        <p class="contact-hero__description">
+          Contact Nexera Group for questions about integrations, technical support, privacy, data
+          deletion, security, or other Meta Gateway requirements.
+        </p>
+
+        <div class="contact-hero__actions">
+          <a href="mailto:info@nexeragroup.rw" class="contact-button contact-button--primary">
+            Email Nexera Group
+
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+
+          <a href="https://nexeragroup.rw/" target="_blank" rel="noopener noreferrer"
+            class="contact-button contact-button--secondary">
+            Company Website
+
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-hero__card">
+        <span class="contact-hero__card-eyebrow"> PRIMARY CONTACT </span>
+
+        <div class="contact-hero__icon">
+          <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+        </div>
+
+        <h2>Nexera Group</h2>
+
+        <a href="mailto:info@nexeragroup.rw"> info@nexeragroup.rw </a>
+
+        <div class="contact-hero__location">
+          <span> LOCATION </span>
+
+          <strong> Kigali, Rwanda </strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       Contact information
+       ====================================================================== -->
+
+  <section class="contact-section contact-section--surface">
+    <div class="contact-container">
+      <header class="contact-heading">
+        <div>
+          <p class="contact-eyebrow">CONTACT INFORMATION</p>
+
+          <h2 class="contact-title">Reach Nexera Group directly.</h2>
+        </div>
+
+        <p class="contact-heading__description">
+          Use the contact information below for Meta Gateway, Nexera Group, legal, privacy, or
+          technical inquiries.
+        </p>
+      </header>
+
+      <div class="contact-details">
+        @for (detail of contactDetails; track detail.label) {
+        <article class="contact-detail">
+          <span class="contact-detail__label">
+            {{ detail.label }}
+          </span>
+
+          @if (detail.href) {
+          <a [href]="detail.href" [attr.target]="detail.external ? '_blank' : null"
+            [attr.rel]="detail.external ? 'noopener noreferrer' : null">
+            {{ detail.value }}
+
+            @if (detail.external) {
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+            }
+          </a>
+          } @else {
+          <strong>
+            {{ detail.value }}
+          </strong>
+          }
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Reasons
+       ====================================================================== -->
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <header class="contact-heading">
+        <div>
+          <p class="contact-eyebrow">HOW WE CAN HELP</p>
+
+          <h2 class="contact-title">Contact us for integration, privacy, security and support.</h2>
+        </div>
+      </header>
+
+      <div class="contact-reasons">
+        @for (reason of contactReasons; track reason.number) {
+        <article class="contact-reason">
+          <span class="contact-reason__number">
+            {{ reason.number }}
+          </span>
+
+          <h3>
+            {{ reason.title }}
+          </h3>
+
+          <p>
+            {{ reason.description }}
+          </p>
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Form
+       ====================================================================== -->
+
+  <section class="contact-section contact-section--form">
+    <div class="contact-container contact-form-layout">
+      <div class="contact-form-layout__intro">
+        <p class="contact-eyebrow">START A CONVERSATION</p>
+
+        <h2 class="contact-title">Tell us what you need.</h2>
+
+        <p>
+          Complete the form and your email application will open with the information prepared for
+          Nexera Group.
+        </p>
+
+        <div class="contact-form-note">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+
+          <div>
+            <strong> Do not include credentials. </strong>
+
+            <p>
+              Never submit passwords, access tokens, API secrets, application secrets, private keys
+              or other sensitive authentication information.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submitContactForm()" novalidate>
+        <div class="contact-field">
+          <app-input inputId="contact-name" label="Name" formControlName="name" type="text"
+            placeholder="Your name" autocomplete="name" [required]="true" [maxLength]="100" />
+        </div>
+
+        <div class="contact-field">
+          <app-input inputId="contact-email" label="Email address" formControlName="email" type="email"
+            placeholder="you@example.com" autocomplete="email" [required]="true" [maxLength]="254" />
+        </div>
+
+        <div class="contact-field">
+          <app-input inputId="contact-company" label="Company or organization" formControlName="company"
+            type="text" placeholder="Organization name" autocomplete="organization" [maxLength]="150" />
+        </div>
+
+        <div class="contact-field">
+          <app-input inputId="contact-subject" label="Subject" formControlName="subject" type="text"
+            placeholder="How can we help?" [required]="true" [minLength]="3" [maxLength]="150" />
+        </div>
+
+        <div class="contact-field contact-field--full">
+          <app-input inputId="contact-message" label="Message" formControlName="message" type="textarea"
+            placeholder="Tell us about your question or integration requirements." [required]="true" [rows]="7"
+            [minLength]="10" [maxLength]="3000" />
+
+          <div class="contact-field__footer">
+            <span></span>
+
+            <span class="contact-field__counter">
+              {{ contactForm.controls.message.value.length }}
+              / 3000
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-form__footer">
+
+          <app-button type="submit" size="large">
+            Prepare email
+
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </app-button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Privacy / security shortcuts
+       ====================================================================== -->
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <p class="contact-eyebrow">SPECIAL REQUESTS</p>
+
+      <div class="contact-special-grid">
+        <a routerLink="/privacy-policy" class="contact-special">
+          <span class="contact-special__number"> 01 </span>
+
+          <div>
+            <h2>Privacy</h2>
+
+            <p>Learn how Meta Gateway processes and protects information.</p>
+          </div>
+
+          <span class="contact-special__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"
+              aria-hidden="true"></i></span>
+        </a>
+
+        <a routerLink="/data-deletion" class="contact-special">
+          <span class="contact-special__number"> 02 </span>
+
+          <div>
+            <h2>Data deletion</h2>
+
+            <p>Follow the dedicated process for requesting deletion of information.</p>
+          </div>
+
+          <span class="contact-special__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"
+              aria-hidden="true"></i></span>
+        </a>
+
+        <a routerLink="/security" class="contact-special">
+          <span class="contact-special__number"> 03 </span>
+
+          <div>
+            <h2>Security</h2>
+
+            <p>Learn about Meta Gateway security controls and reporting guidance.</p>
+          </div>
+
+          <span class="contact-special__arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"
+              aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       Nexera CTA
+       ====================================================================== -->
+
+  <section class="contact-company">
+    <div class="contact-container contact-company__inner">
+      <div>
+        <p class="contact-eyebrow">NEXERA GROUP</p>
+
+        <h2>Building secure software for real business operations.</h2>
+
+        <p>
+          Meta Gateway is developed by Nexera Group as part of our work in software engineering,
+          system architecture, API integration, cloud infrastructure and secure business
+          applications.
+        </p>
+      </div>
+
+      <a href="https://nexeragroup.rw/" target="_blank" rel="noopener noreferrer" class="contact-company__link">
+        Visit Nexera Group
+
+        <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+      </a>
+    </div>
+  </section>
+</article>

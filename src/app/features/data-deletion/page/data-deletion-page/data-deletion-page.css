@@ -1,0 +1,906 @@
+:host {
+  display: block;
+}
+
+.deletion {
+  width: 100%;
+
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.deletion-container {
+  width: 100%;
+
+  max-width: var(--public-content-max-width,
+      80rem);
+
+  margin-inline: auto;
+
+  padding-inline:
+    var(--page-padding-mobile);
+}
+
+/* ==========================================================================
+   Shared
+   ========================================================================== */
+
+.deletion-eyebrow {
+  margin: 0;
+
+  color: var(--text-brand);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.deletion-title {
+  max-width: 48rem;
+
+  margin-top: var(--space-5);
+
+  color: var(--text-primary);
+
+  font-size:
+    clamp(2rem,
+      4.5vw,
+      3.75rem);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.04;
+
+  letter-spacing:
+    var(--letter-spacing-tight);
+}
+
+.deletion-section {
+  padding-block:
+    clamp(5rem,
+      9vw,
+      8rem);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-section--surface {
+  background: var(--surface-secondary);
+}
+
+.deletion-two-column {
+  display: grid;
+
+  grid-template-columns:
+    minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+
+  gap:
+    clamp(4rem,
+      10vw,
+      9rem);
+}
+
+.deletion-copy {
+  max-width: 42rem;
+}
+
+.deletion-copy>p {
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-md);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+.deletion-copy>p+p {
+  margin-top: var(--space-5);
+}
+
+.deletion-copy__lead {
+  color: var(--text-primary) !important;
+
+  font-size:
+    clamp(1.2rem,
+      2vw,
+      1.5rem) !important;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.deletion-hero {
+  padding-block:
+    clamp(5rem,
+      10vw,
+      9rem);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-hero__grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr) minmax(20rem, 0.8fr);
+
+  align-items: center;
+
+  gap:
+    clamp(4rem,
+      9vw,
+      8rem);
+}
+
+.deletion-hero__title {
+  margin-top: var(--space-5);
+
+  color: var(--text-primary);
+
+  font-size:
+    clamp(3.75rem,
+      8vw,
+      6.5rem);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.045em;
+}
+
+.deletion-hero__description {
+  max-width: 44rem;
+
+  margin-top: var(--space-8);
+
+  color: var(--text-secondary);
+
+  font-size:
+    clamp(1rem,
+      1.7vw,
+      1.2rem);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+.deletion-hero__content .deletion-button {
+  margin-top: var(--space-8);
+}
+
+.deletion-hero__card {
+  overflow: hidden;
+
+  border:
+    var(--border-width-thin) solid var(--border);
+
+  border-radius: var(--radius-2xl);
+
+  background: var(--surface);
+
+  box-shadow: var(--shadow-xl);
+}
+
+/* Header */
+
+.deletion-hero__card-header {
+  display: grid;
+
+  padding: var(--space-7);
+
+  grid-template-columns:
+    auto minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: var(--space-4);
+}
+
+.deletion-hero__card-icon {
+  display: inline-flex;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: var(--radius-xl);
+
+  background: var(--primary-subtle);
+
+  color: var(--primary);
+
+  font-size: var(--font-size-xl);
+}
+
+.deletion-hero__card-label {
+  display: block;
+
+  margin-bottom: var(--space-2);
+
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.deletion-hero__card-header strong {
+  display: block;
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+
+  line-height: var(--line-height-tight);
+}
+
+/* Details */
+
+.deletion-hero__card-details {
+  padding-inline: var(--space-7);
+
+  border-top:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-hero__card-detail {
+  padding-block: var(--space-5);
+}
+
+.deletion-hero__card-detail+.deletion-hero__card-detail {
+  border-top:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-hero__card-detail>span {
+  display: block;
+
+  margin-bottom: var(--space-2);
+
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.deletion-hero__card-detail a,
+.deletion-hero__card-detail p {
+  margin: 0;
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+
+  line-height: var(--line-height-relaxed);
+
+  overflow-wrap: anywhere;
+}
+
+.deletion-hero__card-detail a {
+  color: var(--primary);
+
+  font-weight: var(--font-weight-semibold);
+
+  text-decoration: none;
+}
+
+.deletion-hero__card-detail a:hover {
+  text-decoration: underline;
+}
+
+/* Action */
+
+.deletion-hero__card-action {
+  display: flex;
+
+  padding:
+    var(--space-5) var(--space-7);
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: var(--space-4);
+
+  border-top:
+    var(--border-width-thin) solid var(--border);
+
+  background: var(--surface-secondary);
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-decoration: none;
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.deletion-hero__card-action i {
+  color: var(--primary);
+
+  transition:
+    transform var(--transition-fast);
+}
+
+.deletion-hero__card-action:hover {
+  background: var(--surface-hover);
+}
+
+.deletion-hero__card-action:hover i {
+  transform: translateX(0.25rem);
+}
+
+/* ==========================================================================
+   Heading
+   ========================================================================== */
+
+.deletion-heading {
+  display: grid;
+
+  margin-bottom: var(--space-12);
+
+  grid-template-columns:
+    minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+
+  align-items: end;
+
+  gap: var(--space-12);
+}
+
+.deletion-heading__description {
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-md);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   Steps
+   ========================================================================== */
+
+.deletion-steps {
+  border-top:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-step {
+  display: grid;
+
+  min-height: 9rem;
+
+  padding-block: var(--space-6);
+
+  grid-template-columns:
+    3rem minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: var(--space-6);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-step__number {
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+}
+
+.deletion-step h3 {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.deletion-step p {
+  max-width: 44rem;
+
+  margin-top: var(--space-2);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+.deletion-step__arrow {
+  color: var(--text-tertiary);
+}
+
+/* ==========================================================================
+   Details
+   ========================================================================== */
+
+.deletion-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: var(--space-6);
+}
+
+.deletion-detail {
+
+  padding: var(--space-6);
+
+  border-right:
+    var(--border-width-thin) solid var(--border);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-detail h3 {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.deletion-detail p {
+  margin-top: var(--space-3);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   Warning
+   ========================================================================== */
+
+.deletion-section--warning {
+  background: var(--primary-subtle);
+}
+
+.deletion-warning {
+  display: grid;
+
+  grid-template-columns:
+    minmax(18rem, 0.85fr) minmax(0, 1.15fr);
+
+  gap:
+    clamp(4rem,
+      10vw,
+      9rem);
+}
+
+.deletion-warning__content {
+  display: grid;
+
+  grid-template-columns:
+    auto minmax(0, 1fr);
+
+  gap: var(--space-6);
+}
+
+.deletion-warning__icon {
+  display: inline-flex;
+
+  width: 3rem;
+  height: 3rem;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+
+  color: var(--primary);
+}
+
+.deletion-warning__content p {
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-md);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+.deletion-warning__content ul {
+  display: grid;
+
+  margin-top: var(--space-6);
+  padding: 0;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-3);
+
+  list-style: none;
+}
+
+.deletion-warning__content li {
+  padding:
+    var(--space-3) var(--space-4);
+
+  border:
+    var(--border-width-thin) solid var(--border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--surface);
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+}
+
+/* ==========================================================================
+   After submission
+   ========================================================================== */
+
+.deletion-after {
+  border-top:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-after article {
+  display: grid;
+
+  padding-block: var(--space-5);
+
+  grid-template-columns:
+    3rem minmax(0, 1fr);
+
+  gap: var(--space-4);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-after article>span {
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+}
+
+.deletion-after h3 {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+.deletion-after p {
+  margin-top: var(--space-2);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.deletion-button {
+  display: inline-flex;
+
+  min-height: 3.25rem;
+
+  padding-inline: var(--space-5);
+
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  border:
+    var(--border-width-thin) solid transparent;
+
+  border-radius: var(--radius-full);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+
+  text-decoration: none;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.deletion-button:active {
+  transform: scale(0.98);
+}
+
+.deletion-button--primary {
+  border-color: var(--primary);
+
+  background: var(--primary);
+
+  color: var(--on-primary);
+}
+
+.deletion-button--primary:hover,
+.deletion-button--primary:focus-visible {
+  border-color: var(--primary-hover);
+
+  background: var(--primary-hover);
+
+  color: var(--on-primary);
+}
+
+/* ==========================================================================
+   Request
+   ========================================================================== */
+
+.deletion-request {
+  padding-block:
+    clamp(5rem,
+      9vw,
+      8rem);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-request__card {
+  display: grid;
+
+  padding:
+    clamp(2rem,
+      5vw,
+      4rem);
+
+  grid-template-columns:
+    minmax(0, 1fr) minmax(20rem, 0.75fr);
+
+  gap: var(--space-12);
+
+  border:
+    var(--border-width-thin) solid var(--border);
+
+  border-radius: var(--radius-2xl);
+
+  background: var(--surface-secondary);
+}
+
+.deletion-request__card h2 {
+  max-width: 36rem;
+
+  margin-top: var(--space-4);
+
+  color: var(--text-primary);
+
+  font-size:
+    clamp(2rem,
+      4vw,
+      3rem);
+
+  font-weight: var(--font-weight-semibold);
+
+  line-height: 1.05;
+}
+
+.deletion-request__card>div:first-child>p:last-child {
+  max-width: 34rem;
+
+  margin-top: var(--space-5);
+
+  color: var(--text-secondary);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+.deletion-request__details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--space-5);
+}
+
+.deletion-request__details>div {
+  padding-bottom: var(--space-5);
+
+  border-bottom:
+    var(--border-width-thin) solid var(--border);
+}
+
+.deletion-request__details span {
+  display: block;
+
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.deletion-request__details a:not(.deletion-button),
+.deletion-request__details strong {
+  display: block;
+
+  margin-top: var(--space-2);
+
+  color: var(--text-primary);
+
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ==========================================================================
+   Related
+   ========================================================================== */
+
+.deletion-related {
+  padding-block:
+    clamp(4rem,
+      8vw,
+      6rem);
+
+  background: var(--surface-secondary);
+}
+
+.deletion-related__grid {
+  display: grid;
+
+  margin-top: var(--space-8);
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-4);
+}
+
+.deletion-related__grid>a {
+  display: grid;
+
+  padding: var(--space-6);
+
+  grid-template-columns:
+    2rem minmax(0, 1fr) auto;
+
+  gap: var(--space-4);
+
+  border:
+    var(--border-width-thin) solid var(--border);
+
+  border-radius: var(--radius-lg);
+
+  background: var(--surface);
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+}
+
+.deletion-related__grid>a>span:first-child {
+  color: var(--text-tertiary);
+
+  font-size: var(--font-size-xs);
+}
+
+.deletion-related__grid strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+.deletion-related__grid p {
+  margin-top: var(--space-2);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+
+  line-height:
+    var(--line-height-relaxed);
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (min-width: 48rem) {
+  .deletion-container {
+    padding-inline:
+      var(--page-padding-tablet);
+  }
+}
+
+@media (min-width: 62rem) {
+  .deletion-container {
+    padding-inline:
+      var(--page-padding-desktop);
+  }
+}
+
+@media (max-width: 61.999rem) {
+
+  .deletion-hero__grid,
+  .deletion-two-column,
+  .deletion-warning,
+  .deletion-heading,
+  .deletion-request__card {
+    grid-template-columns: 1fr;
+  }
+
+  .deletion-details {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 47.999rem) {
+  .deletion-hero {
+    padding-block: var(--space-16);
+  }
+
+  .deletion-hero__title {
+    font-size:
+      clamp(3rem,
+        16vw,
+        4.5rem);
+  }
+
+  .deletion-section {
+    padding-block: var(--space-16);
+  }
+
+  .deletion-details,
+  .deletion-related__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deletion-step {
+    grid-template-columns:
+      2rem minmax(0, 1fr);
+  }
+
+  .deletion-step__arrow {
+    display: none;
+  }
+
+  .deletion-warning__content {
+    grid-template-columns: 1fr;
+  }
+
+  .deletion-warning__content ul {
+    grid-template-columns: 1fr;
+  }
+
+  .deletion-button {
+    width: 100%;
+  }
+}

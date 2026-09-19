@@ -1,0 +1,40 @@
+:host {
+  display: block;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  /*
+   * The global 90rem width is suitable for dashboards.
+   * Public marketing/legal content should be more restrained.
+   */
+  --public-content-max-width: 80rem;
+  --public-header-height: 5rem;
+}
+
+.public-layout {
+  display: flex;
+
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  flex-direction: column;
+
+  background: var(--background);
+  color: var(--text-primary);
+}
+
+.public-layout__main {
+  width: 100%;
+
+  flex: 1 0 auto;
+}
+
+/*
+ * The main element receives focus from the skip link.
+ * The skip link itself provides the visible focus indication.
+ */
+.public-layout__main:focus {
+  outline: none;
+}

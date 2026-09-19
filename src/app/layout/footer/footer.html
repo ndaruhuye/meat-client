@@ -1,0 +1,58 @@
+<footer class="footer">
+  <section class="footer-cta">
+    <div class="footer-wrap cta-inner">
+      <div>
+        <p class="eyebrow">LET’S CONNECT</p>
+        <h2>Build better connections.<br />Start a conversation.</h2>
+        <p>
+          Questions about an integration, your privacy, or your data?<br />Talk to the team behind
+          Meta Gateway.
+        </p>
+      </div>
+      <a routerLink="/contact" class="contact-link"
+        >Talk to Nexera Group <i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+      ></a>
+    </div>
+  </section>
+  <div class="footer-wrap">
+    <div class="footer-grid">
+      <div class="footer-intro">
+        <a routerLink="/" class="footer-brand">Meta Gateway<span>BY NEXERA GROUP</span></a>
+        <p>Thoughtful engineering.<br />Responsible integrations.<br />Built in Kigali, Rwanda.</p>
+        <a href="mailto:info@nexeragroup.rw" class="email"
+          >info@nexeragroup.rw
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i
+        ></a>
+      </div>
+      @for (section of sections; track section.title) {
+        <nav [attr.aria-label]="section.title + ' links'">
+          <h2>{{ section.title }}</h2>
+          <ul>
+            @for (link of section.links; track link.label) {
+              <li>
+                @if (link.route) {
+                  <a [routerLink]="link.route">{{ link.label }}</a>
+                } @else if (link.href) {
+                  <a
+                    [href]="link.href"
+                    [attr.target]="link.href.startsWith('http') ? '_blank' : null"
+                    [attr.rel]="link.href.startsWith('http') ? 'noopener noreferrer' : null"
+                    >{{ link.label }}
+                    @if (link.href.startsWith('http')) {
+                      <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    }
+                  </a>
+                }
+              </li>
+            }
+          </ul>
+        </nav>
+      }
+    </div>
+    <div class="footer-bottom">
+      <p>© {{ currentYear }} Nexera Group. All rights reserved.</p>
+      <p>Meta Gateway is a Nexera Group product.</p>
+    </div>
+    <p class="trademark">WhatsApp, Instagram and Facebook are trademarks of Meta Platforms, Inc.</p>
+  </div>
+</footer>

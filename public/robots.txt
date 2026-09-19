@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /health
+Disallow: /terms-of-service
+Disallow: /not-found
+
+Sitemap: https://meta.nexeragroup.rw/sitemap.xml

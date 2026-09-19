@@ -1,0 +1,4 @@
+/* Shared boundary only. Page and shared components own their visual styles. */
+article.information-page {
+  overflow-wrap: anywhere;
+}

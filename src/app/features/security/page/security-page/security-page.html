@@ -1,0 +1,289 @@
+<article class="security information-page">
+  <!-- Hero -->
+
+  <header class="security-hero">
+    <div class="security-container security-hero__grid">
+      <div class="security-hero__content">
+        <a routerLink="/" class="page-breadcrumb"
+          ><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Meta Gateway</a
+        >
+        <p class="security-eyebrow">SECURITY • INFRASTRUCTURE • INTEGRATIONS</p>
+
+        <h1 class="security-hero__title">Security built into the integration layer.</h1>
+
+        <p class="security-hero__description">
+          Meta Gateway is designed to keep sensitive integration responsibilities inside controlled
+          backend infrastructure while providing authorized business systems with a predictable and
+          secure communication boundary.
+        </p>
+      </div>
+
+      <div class="security-hero__visual">
+        <div class="security-shield">
+          <span class="security-shield__icon">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          </span>
+
+          <span class="security-shield__eyebrow"> NEXERA GROUP </span>
+
+          <strong> Meta Gateway </strong>
+
+          <p>Protected integration infrastructure</p>
+
+          <div class="security-shield__status">
+            <span></span>
+            Designed around security
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+
+  <section class="security-section">
+    <div class="security-container security-intro">
+      <div>
+        <p class="security-eyebrow">SECURITY BY DESIGN</p>
+
+        <h2 class="security-title">Sensitive integration logic belongs on the server.</h2>
+      </div>
+
+      <div class="security-intro__content">
+        <p class="security-intro__lead">
+          Meta Gateway separates external platform communication from public-facing applications.
+        </p>
+
+        <p>
+          Business applications do not need to independently manage Meta credentials, webhook
+          verification, request validation or integration-specific security logic.
+        </p>
+
+        <p>
+          These responsibilities can remain inside the gateway and surrounding backend services,
+          creating a clearer security boundary between internal systems and external platforms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+
+  <section class="security-section security-section--surface">
+    <div class="security-container">
+      <header class="security-heading">
+        <div>
+          <p class="security-eyebrow">CORE PRINCIPLES</p>
+
+          <h2 class="security-title">Controls designed around protected communication.</h2>
+        </div>
+
+        <p class="security-heading__description">
+          Security is applied across authentication, credentials, request processing, external
+          communication and operational visibility.
+        </p>
+      </header>
+
+      <div class="security-principles">
+        @for (item of principles; track item.number) {
+          <article class="security-principle">
+            <div class="security-principle__top">
+              <span class="security-principle__icon">
+                <i [class]="item.icon" aria-hidden="true"></i>
+              </span>
+
+              <span class="security-principle__number">
+                {{ item.number }}
+              </span>
+            </div>
+
+            <h3>
+              {{ item.title }}
+            </h3>
+
+            <p>
+              {{ item.description }}
+            </p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+
+  <section class="security-section security-section--dark">
+    <div class="security-container">
+      <header class="security-heading security-heading--dark">
+        <div>
+          <p class="security-eyebrow">SECURITY BOUNDARY</p>
+
+          <h2 class="security-title">Security is applied across the entire request flow.</h2>
+        </div>
+
+        <p class="security-heading__description">
+          Each system has a specific responsibility, reducing unnecessary exposure of sensitive
+          platform functionality.
+        </p>
+      </header>
+
+      <div class="security-flow">
+        @for (layer of layers; track layer.number) {
+          <article class="security-flow__item">
+            <span class="security-flow__number">
+              {{ layer.number }}
+            </span>
+
+            <div>
+              <h3>
+                {{ layer.title }}
+              </h3>
+
+              <p>
+                {{ layer.description }}
+              </p>
+            </div>
+
+            @if (layer.number !== '04') {
+              <span class="security-flow__arrow" aria-hidden="true"
+                ><i class="fa-solid fa-arrow-right" aria-hidden="true"></i
+              ></span>
+            }
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials -->
+
+  <section class="security-section">
+    <div class="security-container security-two-column">
+      <div>
+        <p class="security-eyebrow">CREDENTIAL PROTECTION</p>
+
+        <h2 class="security-title">Platform secrets stay out of the browser.</h2>
+      </div>
+
+      <div class="security-copy">
+        <p class="security-copy__lead">
+          Access tokens, application secrets and other sensitive credentials should only be handled
+          by trusted backend systems.
+        </p>
+
+        <p>
+          Meta Gateway is designed so browser clients do not need direct access to protected Meta
+          credentials in order to perform supported business operations.
+        </p>
+
+        <div class="credential-warning">
+          <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+
+          <div>
+            <strong> Never send credentials through public forms. </strong>
+
+            <p>
+              Passwords, access tokens, application secrets and private keys should never be
+              submitted through the public contact or data deletion pages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practices -->
+
+  <section class="security-section security-section--surface">
+    <div class="security-container">
+      <header class="security-heading">
+        <div>
+          <p class="security-eyebrow">SECURITY PRACTICES</p>
+
+          <h2 class="security-title">Principles that guide the architecture.</h2>
+        </div>
+      </header>
+
+      <div class="security-practices">
+        @for (practice of practices; track practice.title) {
+          <article class="security-practice">
+            <h3>
+              {{ practice.title }}
+            </h3>
+
+            <p>
+              {{ practice.description }}
+            </p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Incident / reporting -->
+
+  <section class="security-section">
+    <div class="security-container security-report">
+      <div>
+        <p class="security-eyebrow">SECURITY CONTACT</p>
+
+        <h2 class="security-title">Found a potential security issue?</h2>
+
+        <p class="security-report__description">
+          Security-related concerns involving Meta Gateway can be reported directly to Nexera Group
+          for review.
+        </p>
+      </div>
+
+      <div class="security-report__card">
+        <span> CONTACT </span>
+
+        <a href="mailto:info@nexeragroup.rw"> info@nexeragroup.rw </a>
+
+        <p>
+          Include enough technical information to help us understand the issue, but do not include
+          passwords, access tokens, private keys or other secrets.
+        </p>
+
+        <a routerLink="/contact" class="security-action">
+          Contact Nexera Group
+          <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+
+  <section class="security-related">
+    <div class="security-container">
+      <p class="security-eyebrow">RELATED INFORMATION</p>
+
+      <div class="security-related__grid">
+        <a routerLink="/privacy-policy">
+          <span>01</span>
+
+          <div>
+            <strong> Privacy Policy </strong>
+
+            <p>Learn how information processed through Meta Gateway is handled.</p>
+          </div>
+
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+
+        <a routerLink="/data-deletion">
+          <span>02</span>
+
+          <div>
+            <strong> Data Deletion </strong>
+
+            <p>Learn how to request deletion of information associated with Meta Gateway.</p>
+          </div>
+
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</article>

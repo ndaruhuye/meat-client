@@ -1,0 +1,122 @@
+<article class="home">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <span class="product-label"><span></span> A Nexera Group product</span>
+      <p class="eyebrow">BUSINESS SYSTEMS. CONNECTED.</p>
+      <h1 id="hero-title">
+        Your business.<br />Your conversations.<br /><em>Connected with care.</em>
+      </h1>
+      <p class="hero-description">
+        A dedicated integration layer between your business applications and Meta platforms. Built
+        around clear boundaries, protected credentials, and responsible data handling.
+      </p>
+      <div class="actions">
+        <a routerLink="/contact" class="cta">Let’s talk integrations <i class="fa-solid fa-arrow-right"
+            aria-hidden="true"></i></a><a routerLink="/security" class="cta secondary">Explore security</a>
+      </div>
+      <p class="hero-note">Engineered by Nexera Group · Kigali, Rwanda</p>
+    </div>
+    <div class="gateway-visual" role="img"
+      aria-label="Business applications connect through Meta Gateway to configured Meta services. Webhook events return through the gateway.">
+      <div class="visual-top">
+        <span><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Integration
+          architecture</span><span class="visual-tag">META GATEWAY</span>
+      </div>
+      <div class="system-node">
+        <span class="node-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+        <div><small>YOUR ECOSYSTEM</small><strong>Business applications</strong></div>
+        <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+      </div>
+      <div class="connector"><span>Authorized requests</span></div>
+      <div class="gateway-node">
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        <h2>Meta Gateway</h2>
+        <p>Validate. Connect. Process.</p>
+        <div><span>API requests</span><span>Webhook events</span></div>
+      </div>
+      <div class="connector"><span>Configured permissions</span></div>
+      <div class="platforms">
+        <span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
+        <span><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</span>
+        <span><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</span>
+        <span><i class="fa-brands fa-facebook-messenger" aria-hidden="true"></i> Messenger</span>
+        <span><i class="fa-brands fa-meta" aria-hidden="true"></i> Meta APIs</span>
+      </div>
+      <p class="visual-note">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i> Credentials stay in the backend
+      </p>
+    </div>
+  </section>
+  <div class="principles wrap">
+    @for (item of trustItems; track item.number) {
+    <div>
+      <span>{{ item.number }}</span><strong>{{ item.title }}</strong>
+    </div>
+    }
+  </div>
+  <section class="section wrap">
+    <div class="section-heading">
+      <p class="eyebrow">ONE INTEGRATION LAYER</p>
+      <h2>Less complexity.<br />More connected possibilities.</h2>
+      <p>
+        Keep platform-specific communication in one place, so your applications can focus on the
+        work they do best.
+      </p>
+    </div>
+    <div class="integration-grid">
+      @for (item of integrations; track item.name) {
+      <article class="card">
+        <span class="card-icon"><i [class]="item.icon" aria-hidden="true"></i></span>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <span class="card-note">Subject to configuration and platform permissions</span>
+      </article>
+      }
+    </div>
+  </section>
+  <section class="approach section">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">ENGINEERING WITH PURPOSE</p>
+        <h2>Good connections start<br />with strong foundations.</h2>
+        <p>
+          Thoughtful architecture, clear responsibilities, and maintainable systems. The same
+          engineering approach behind Nexera Group, applied to your integrations.
+        </p>
+        <a href="https://nexeragroup.rw/" target="_blank" rel="noopener noreferrer" class="text-link">Meet Nexera Group
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      </div>
+      <div class="approach-list">
+        @for (item of trustItems; track item.number) {
+        <div>
+          <span>{{ item.number }}</span>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+  <section class="section wrap">
+    <div class="section-heading">
+      <p class="eyebrow">CLARITY BUILDS TRUST</p>
+      <h2>Your questions.<br />Clear information.</h2>
+      <p>
+        Everything you need to understand how Meta Gateway approaches privacy, security, and your
+        data.
+      </p>
+    </div>
+    <div class="resource-grid">
+      @for (item of legalItems; track item.number) {
+      <a [routerLink]="item.route" class="resource"><span class="resource-number">{{ item.number }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <span class="resource-action">{{ item.action }} <i class="fa-solid fa-arrow-right"
+            aria-hidden="true"></i></span>
+      </a>
+      }
+    </div>
+  </section>
+</article>

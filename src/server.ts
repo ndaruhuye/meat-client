@@ -12,17 +12,19 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
-/**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/{*splat}', (req, res) => {
- *   // Handle API request
- * });
- * ```
- */
+app.set('trust proxy', 1);
+
+app.get('/health', (_req, res) => {
+  res.status(200).set('Cache-Control', 'no-store').json({ status: 'ok' });
+});
+
+// API traffic belongs to the backend/reverse proxy, never Angular's HTML fallback.
+app.disable('x-powered-by');
+app.use('/api', (_req, res) => {
+  res.status(404).set('Cache-Control', 'no-store').json({
+    error: 'api_route_not_configured',
+  });
+});
 
 /**
  * Serve static files from /browser
@@ -41,9 +43,7 @@ app.use(
 app.use((req, res, next) => {
   angularApp
     .handle(req)
-    .then((response) =>
-      response ? writeResponseToNodeResponse(response, res) : next(),
-    )
+    .then((response) => (response ? writeResponseToNodeResponse(response, res) : next()))
     .catch(next);
 });
 
@@ -52,13 +52,14 @@ app.use((req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url) || process.env['pm_id']) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
+  const port = Number.parseInt(process.env['PORT'] ?? '4000', 10);
+  const host = process.env['HOST'] || '0.0.0.0';
+  app.listen(port, host, (error) => {
     if (error) {
       throw error;
     }
 
-    console.log(`Node Express server listening on http://localhost:${port}`);
+    console.log(`Node Express server listening on ${host}:${port}`);
   });
 }
 

@@ -1,0 +1,24 @@
+name: meta-client-production
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: '10m'
+    max-file: '5'
+
+services:
+  client:
+    image: '${IMAGE_NAME:?required}:${IMAGE_TAG:?required}'
+    restart: unless-stopped
+    init: true
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 4200
+    ports:
+      - '127.0.0.1:10501:4200'
+    read_only: true
+    tmpfs: /tmp
+    cap_drop: [ALL]
+    security_opt: ['no-new-privileges:true']
+    logging: *logging

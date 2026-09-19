@@ -1,0 +1,379 @@
+<article class="deletion information-page">
+  <!-- Hero -->
+
+  <header class="deletion-hero">
+    <div class="deletion-container deletion-hero__grid">
+      <div class="deletion-hero__content">
+        <a routerLink="/" class="page-breadcrumb"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Meta
+          Gateway</a>
+        <p class="deletion-eyebrow">PRIVACY • USER DATA</p>
+
+        <h1 class="deletion-hero__title">Data Deletion</h1>
+
+        <p class="deletion-hero__description">
+          You can request deletion of information associated with your use of Meta Gateway by
+          contacting Nexera Group using the instructions below.
+        </p>
+
+        <a [href]="deletionMailto" class="deletion-button deletion-button--primary">
+          Submit deletion request
+
+          <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+
+      <div class="deletion-hero__card">
+        <div class="deletion-hero__card-header">
+          <div class="deletion-hero__card-icon">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </div>
+
+          <div>
+            <span class="deletion-hero__card-label">
+              REQUEST CHANNEL
+            </span>
+
+            <strong>
+              Email Nexera Group
+            </strong>
+          </div>
+        </div>
+
+        <div class="deletion-hero__card-details">
+          <div class="deletion-hero__card-detail">
+            <span>EMAIL</span>
+
+            <a [href]="deletionMailto">
+              {{ email }}
+            </a>
+          </div>
+
+          <div class="deletion-hero__card-detail">
+            <span>SUBJECT</span>
+
+            <p>
+              {{ emailSubject }}
+            </p>
+          </div>
+        </div>
+
+        <a [href]="deletionMailto" class="deletion-hero__card-action">
+          <span>Start deletion request</span>
+
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+
+  <section class="deletion-section">
+    <div class="deletion-container deletion-two-column">
+      <div>
+        <p class="deletion-eyebrow">YOUR REQUEST</p>
+
+        <h2 class="deletion-title">Request removal of information associated with Meta Gateway.</h2>
+      </div>
+
+      <div class="deletion-copy">
+        <p class="deletion-copy__lead">
+          Nexera Group provides a direct process for submitting data deletion requests related to
+          Meta Gateway.
+        </p>
+
+        <p>
+          The information required to process a request depends on the integration and the data
+          involved. We may need enough information to identify the relevant business account,
+          integration or platform record.
+        </p>
+
+        <p>
+          Do not send passwords, access tokens, private keys, application secrets or other
+          credentials as part of your request.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+
+  <section class="deletion-section deletion-section--surface">
+    <div class="deletion-container">
+      <header class="deletion-heading">
+        <div>
+          <p class="deletion-eyebrow">DELETION PROCESS</p>
+
+          <h2 class="deletion-title">How to submit a data deletion request.</h2>
+        </div>
+
+        <p class="deletion-heading__description">
+          Follow these steps so your request contains enough information to be reviewed efficiently.
+        </p>
+      </header>
+
+      <div class="deletion-steps">
+        @for (step of steps; track step.number) {
+        <article class="deletion-step">
+          <span class="deletion-step__number">
+            {{ step.number }}
+          </span>
+
+          <div>
+            <h3>
+              {{ step.title }}
+            </h3>
+
+            <p>
+              {{ step.description }}
+            </p>
+          </div>
+
+          @if (step.number !== '05') {
+          <span class="deletion-step__arrow" aria-hidden="true"> ↓ </span>
+          }
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Required information -->
+
+  <section class="deletion-section">
+    <div class="deletion-container">
+      <header class="deletion-heading">
+        <div>
+          <p class="deletion-eyebrow">WHAT TO INCLUDE</p>
+
+          <h2 class="deletion-title">Information that helps us locate your data.</h2>
+        </div>
+      </header>
+
+      <div class="deletion-details">
+        @for (detail of requiredDetails; track detail.title) {
+        <article class="deletion-detail">
+          <h3>
+            {{ detail.title }}
+          </h3>
+
+          <p>
+            {{ detail.description }}
+          </p>
+        </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Do not include -->
+
+  <section class="deletion-section deletion-section--warning">
+    <div class="deletion-container deletion-warning">
+      <div>
+        <p class="deletion-eyebrow">IMPORTANT</p>
+
+        <h2 class="deletion-title">Do not include secrets in your request.</h2>
+      </div>
+
+      <div class="deletion-warning__content">
+        <div class="deletion-warning__icon">
+          <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+        </div>
+
+        <div>
+          <p>
+            Your deletion request should contain enough information to identify the relevant account
+            or integration, but it should never include sensitive authentication information.
+          </p>
+
+          <ul>
+            <li>Passwords</li>
+
+            <li>Meta access tokens</li>
+
+            <li>Application secrets</li>
+
+            <li>Private encryption keys</li>
+
+            <li>API secrets</li>
+
+            <li>Authentication credentials</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What happens after -->
+
+  <section class="deletion-section">
+    <div class="deletion-container deletion-two-column">
+      <div>
+        <p class="deletion-eyebrow">AFTER SUBMISSION</p>
+
+        <h2 class="deletion-title">What happens after we receive your request?</h2>
+      </div>
+
+      <div class="deletion-copy">
+        <div class="deletion-after">
+          <article>
+            <span>01</span>
+
+            <div>
+              <h3>Request review</h3>
+
+              <p>
+                We review the information provided and determine which integration or records relate
+                to the request.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+
+            <div>
+              <h3>Identity or authorization verification</h3>
+
+              <p>
+                Additional verification may be required before information associated with an
+                account or organization can be deleted.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+
+            <div>
+              <h3>Data handling</h3>
+
+              <p>
+                Relevant information may be deleted, anonymized or otherwise removed from active
+                processing where appropriate.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span>04</span>
+
+            <div>
+              <h3>Response</h3>
+
+              <p>
+                We may contact you if additional information is required or to confirm the outcome
+                of the request.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retention -->
+
+  <section class="deletion-section deletion-section--surface">
+    <div class="deletion-container deletion-two-column">
+      <div>
+        <p class="deletion-eyebrow">DATA RETENTION</p>
+
+        <h2 class="deletion-title">Some information may have different retention requirements.</h2>
+      </div>
+
+      <div class="deletion-copy">
+        <p>
+          A deletion request does not necessarily mean every record can always be removed
+          immediately.
+        </p>
+
+        <p>
+          Certain information may need to be retained where reasonably necessary for security, fraud
+          prevention, system integrity, legal obligations, dispute resolution or other legitimate
+          operational requirements.
+        </p>
+
+        <p>
+          Information that is no longer required may be deleted, anonymized or otherwise removed
+          according to the applicable operational requirements.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request card -->
+
+  <section class="deletion-request">
+    <div class="deletion-container">
+      <div class="deletion-request__card">
+        <div>
+          <p class="deletion-eyebrow">READY TO SUBMIT?</p>
+
+          <h2>Send your data deletion request.</h2>
+
+          <p>Use the subject below so your request can be identified correctly.</p>
+        </div>
+
+        <div class="deletion-request__details">
+          <div>
+            <span> EMAIL </span>
+
+            <a [href]="deletionMailto">
+              {{ email }}
+            </a>
+          </div>
+
+          <div>
+            <span> SUBJECT </span>
+
+            <strong>
+              {{ emailSubject }}
+            </strong>
+          </div>
+
+          <a [href]="deletionMailto" class="deletion-button deletion-button--primary">
+            Open email
+
+            <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related -->
+
+  <section class="deletion-related">
+    <div class="deletion-container">
+      <p class="deletion-eyebrow">RELATED INFORMATION</p>
+
+      <div class="deletion-related__grid">
+        <a routerLink="/privacy-policy">
+          <span>01</span>
+
+          <div>
+            <strong> Privacy Policy </strong>
+
+            <p>Learn what information Meta Gateway may process and how it is handled.</p>
+          </div>
+
+          <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+
+        <a routerLink="/security">
+          <span>02</span>
+
+          <div>
+            <strong> Security </strong>
+
+            <p>Learn how Meta Gateway protects integration infrastructure and credentials.</p>
+          </div>
+
+          <span aria-hidden="true"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</article>
