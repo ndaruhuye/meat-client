@@ -125,10 +125,11 @@ jobs:
           ssh -o BatchMode=yes -o StrictHostKeyChecking=yes -o ConnectTimeout=15 \
             -p "${SERVER_PORT}" "${SERVER_USER}@${SERVER_HOST}" \
             "set -e
-             test -d '${DEPLOY_PATH}'
-             test -w '${DEPLOY_PATH}'
-             docker version >/dev/null
-             docker compose version >/dev/null"
+             mkdir -p '${DEPLOY_PATH}' || { echo 'Cannot create deployment directory: ${DEPLOY_PATH}' >&2; exit 1; }
+             test -w '${DEPLOY_PATH}' || { echo 'Deployment directory is not writable: ${DEPLOY_PATH}' >&2; exit 1; }
+             command -v docker >/dev/null || { echo 'Docker is not installed or is not on PATH' >&2; exit 1; }
+             docker version >/dev/null || { echo 'Docker daemon is unavailable for this SSH user' >&2; exit 1; }
+             docker compose version >/dev/null || { echo 'Docker Compose is unavailable' >&2; exit 1; }"
 
       - name: Log production server in to GHCR
         shell: bash
