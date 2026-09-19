@@ -13,9 +13,9 @@ RUN pnpm prune --prod
 FROM node:24-bookworm-slim AS runtime
 WORKDIR /app
 ENV NODE_ENV=production HOST=0.0.0.0 PORT=4200
-COPY --from=build --chown=node:node package.json ./
-COPY --from=build --chown=node:node node_modules ./node_modules
-COPY --from=build --chown=node:node dist/client/prod/ssr ./dist/client/prod/ssr
+COPY --from=build --chown=node:node /app/package.json ./
+COPY --from=build --chown=node:node /app/node_modules ./node_modules
+COPY --from=build --chown=node:node /app/dist/client/prod/ssr ./dist/client/prod/ssr
 USER node
 EXPOSE 4200
 STOPSIGNAL SIGTERM
