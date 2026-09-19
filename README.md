@@ -65,8 +65,9 @@ Use the named package scripts consistently. The `prod` and `production` Angular
 configurations currently differ; `pnpm build` explicitly selects `prod`.
 The production SSR host is `https://meta.nexeragroup.rw`. Build the server bundle
 with `pnpm build:ssr`, then run the generated process with `HOST=0.0.0.0` and
-`PORT=4000`. The reverse proxy should terminate TLS for that domain, forward
-HTML requests to port 4000, and route `/api/v1` to the API service.
+`PORT=4000` for a direct host process. The Docker deployment uses container
+port `4200`, published on host port `10501`; the reverse proxy terminates TLS,
+forwards HTML requests there, and routes `/api/v1` to the API service.
 Static release metadata is served by the same SSR process at `/robots.txt`,
 `/sitemap.xml`, and `/site.webmanifest`.
 
