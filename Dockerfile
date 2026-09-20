@@ -8,7 +8,6 @@ RUN pnpm install --frozen-lockfile
 FROM dependencies AS build
 COPY . .
 RUN pnpm build:ssr
-RUN test -f /app/dist/client/prod/ssr/server/server.mjs
 RUN pnpm prune --prod
 
 FROM node:24-bookworm-slim AS runtime
